@@ -6,9 +6,9 @@ const GithubSignIn = () => {
   return (
     <form action={doSocialLogin}>      
     
-      <Button className="w-full" variant="outline" type="submit" name="action" value="github">
+      <Button className="w-full text-sm " variant="outline" type="submit" name="action" value="github">
         <Github />
-        Continue with GitHub
+        With GitHub
       </Button>
     </form>
   );

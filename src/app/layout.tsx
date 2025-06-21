@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
-import { Inter} from "next/font/google";
+import { Nunito} from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navigation";
 
-const interSans = Inter({
-  variable: "--font-inter-sans",
+const nunitoSans = Nunito({
+  variable: "--font-nunito-sans",
   subsets: ["latin"],
 });
 
-const interMono = Inter({
-  variable: "--font-inter-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Next-auth-cata",
@@ -26,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${interSans.variable}  antialiased`}
+        className={`${nunitoSans.variable}   antialiased`}
       >
         <NavBar/>
         {children}

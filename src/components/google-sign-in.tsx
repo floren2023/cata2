@@ -8,7 +8,7 @@ const GoogleSignIn = () => {
     
       <Button className="w-full" variant="outline" type="submit" name="action" value="google">
         <FcGoogle />
-        Continue with Google
+        With Google
       </Button>
     </form>
   );

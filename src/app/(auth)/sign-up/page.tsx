@@ -11,27 +11,21 @@ const Page = async () => {
   if (session) redirect("/");
 
   return (
-    <div className="w-full max-w-sm mx-auto space-y-6">
-      <h1 className="text-2xl font-bold text-center mb-6">Create Account</h1>
-
-      <GithubSignIn />
-
-      <div className="relative">
-        <div className="absolute inset-0 flex items-center">
-          <span className="w-full border-t" />
-        </div>
-        <div className="relative flex justify-center text-sm">
-          <span className="bg-background px-2 text-muted-foreground">
-            Or continue with email
-          </span>
-        </div>
-      </div>
+    <div className="w-full max-w-sm mx-auto space-y-6 p-10 border-1 border-red-700 mt-10 rounded-md shadow1">
+      <h1 className="text-2xl font-bold text-center mb-6 text-red-800">Create Account</h1> 
 
       {/* Email/Password Sign Up */}
       <form
         className="space-y-4"
        
       >
+         <Input
+          name="name"
+          placeholder="Name"
+          type="text"
+          required
+          autoComplete="name"
+        />
         <Input
           name="email"
           placeholder="Email"
@@ -46,14 +40,14 @@ const Page = async () => {
           required
           autoComplete="new-password"
         />
-        <Button className="w-full" type="submit">
+        <Button className="w-full bg-red-900 text-white hover:bg-red-800" type="submit">
           Sign Up
         </Button>
       </form>
 
-      <div className="text-center">
+      <div className="text-center text-sm italic font-thin ">
         <Button asChild variant="link">
-          <Link href="/sign-in">Already have an account? Sign in</Link>
+          <Link href="/sign-in">Already have an account?<span className="text-red-800">Sign in</span> </Link>
         </Button>
       </div>
     </div>

@@ -13,13 +13,16 @@ const Dashboard = async() => {
     <div className='mx-10'>
       <nav className="flex justify-between p-4 bg-gray-200  text-xl">
         <div className='flex gap-4 font-thin justify-center text-center'>
-          Bienvenido:<span className='text-red-900 capitalize font-medium'>
-            {session?.user?.name}</span>
+          Bienvenido:
+          <span className='text-red-900 capitalize font-medium'>
+
+
+            {session?.user?.name ? session?.user?.name:session?.user?.email}</span>
          {(session.user.image&&session.user.name)&&
              <div>
                <Image src={session?.user?.image}  alt={session?.user?.name} width={30} height={30} className='rounded-full'/></div>
          } 
-          </div> 
+         </div>
        <div className='justify-end text-end'><SignOut/></div>
       
 
